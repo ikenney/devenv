@@ -1,0 +1,29 @@
+#!/usr/bin/env ruby
+#^syntax detection
+
+site 'http://community.opscode.com/api/v1'
+
+# cookbook 'chef-client'
+
+# cookbook 'apache2', '>= 1.0.0'
+
+# cookbook 'rvm',
+#   :git => 'https://github.com/fnichol/chef-rvm'
+
+# cookbook 'postgresql',
+#   :git => 'https://github.com/findsyou/cookbooks',
+#   :ref => 'postgresql-improvements'
+#
+
+cookbook 'apt'
+cookbook 'vim'
+cookbook 'tmux'
+cookbook 'git'
+cookbook 'build-essential'
+cookbook 'curl'
+cookbook 'rvm', git: 'https://github.com/fnichol/chef-rvm.git'
+
+cookbook 'dotmatrix', git: 'https://github.com/ikenney/dotmatrix.git'
+#cookbook 'rvm', :git => '/vagrant/chef/rvm/.git'
+# cookbook 'rvm_ruby', :git => '/vagrant/chef/rvm_ruby/.git'
+
