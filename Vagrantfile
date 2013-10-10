@@ -24,9 +24,10 @@ Vagrant.configure("2") do |config|
     chef.add_recipe 'vim'
     chef.add_recipe 'git'
     chef.add_recipe 'dotmatrix'
+#    chef.add_recipe 'postgresql'
     chef.add_recipe 'rvm::system'
     chef.add_recipe 'rvm::gem_package'
-
+    chef.add_recipe 'heroku-toolbelt'
     chef.json = {
       :rvm => {
         :rubies => 'ruby-head',
