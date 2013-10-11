@@ -24,8 +24,10 @@ Vagrant.configure("2") do |config|
     chef.add_recipe 'vim'
     chef.add_recipe 'git'
     chef.add_recipe 'dotmatrix'
-#    chef.add_recipe 'postgresql'
+    chef.add_recipe 'postgresql::server'
+    chef.add_recipe 'postgres-rails-db'
     chef.add_recipe 'rvm::system'
+    chef.add_recipe 'rvm::vagrant'
     chef.add_recipe 'rvm::gem_package'
     chef.add_recipe 'heroku-toolbelt'
     chef.json = {
@@ -38,6 +40,20 @@ Vagrant.configure("2") do |config|
           {name: 'rake'},
           {name: 'rails'}
         ]
+      },
+      :postgresql => {
+        :password => { 
+          "postgres" => "md59e7d9c011017f092d4412b3fb11c8126",
+          "vagrant" => "md5873a21eb415f6dca5d4863cb0a4c330d"
+        },
+        :database => { "create" => [ "rails_dev", "rails_test" ] },
+        :pg_hba   => [
+          { :type => "local", :db => "all", :user => "postgres", :addr => "", :method => "trust"},
+          { :type => "host", :db => "all", :user => "postgres", :addr => "127.0.0.1/32", :method => "trust"}
+        ]
+      },
+      :build_essential => {
+        :compiletime => true
       }
     }
   end

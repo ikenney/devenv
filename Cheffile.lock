@@ -59,6 +59,13 @@ GIT
   specs:
     heroku-toolbelt (0.1.0)
 
+GIT
+  remote: https://github.com/ikenney/postgres-rails-db.git
+  ref: master
+  sha: bd54bc7c499cfb777d10db60021b4c1374176e32
+  specs:
+    postgres-rails-db (0.1.0)
+
 DEPENDENCIES
   apt (>= 0)
   build-essential (>= 0)
@@ -68,6 +75,7 @@ DEPENDENCIES
   git (>= 0)
   heroku-toolbelt (>= 0)
   openssl (>= 0)
+  postgres-rails-db (>= 0)
   postgresql (>= 0)
   rvm (>= 0)
   tmux (>= 0)

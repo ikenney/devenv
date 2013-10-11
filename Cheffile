@@ -25,7 +25,6 @@ cookbook 'openssl'
 cookbook 'database'
 cookbook 'postgresql'
 cookbook 'rvm', git: 'https://github.com/fnichol/chef-rvm.git'
-#cookbook 'chef-heroku-toolbelt', git: 'https://github.com/jimeh/chef-heroku-toolbelt.git'
 cookbook 'heroku-toolbelt', git: 'https://github.com/ikenney/heroku-toolbelt.git'
 cookbook 'dotmatrix', git: 'https://github.com/ikenney/dotmatrix.git'
-
+cookbook 'postgres-rails-db', git: 'https://github.com/ikenney/postgres-rails-db.git'
