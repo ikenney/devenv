@@ -5,7 +5,7 @@ This cookbook includes recipes to execute apt-get update to ensure the local APT
 
 Requirements
 ------------
-**Version 2.0.0+ of this cookbook requires **Chef 11.0.0** or later**. If your Chef version is earlier than 11.0.0, use version 1.10.0 of this cookbook.
+**Version 2.0.0+ of this cookbook requires Chef 11.0.0 or later**. If your Chef version is earlier than 11.0.0, use version 1.10.0 of this cookbook.
 
 Version 1.8.2 to 1.10.0 of this cookbook requires **Chef 10.16.4** or later.
 
@@ -23,7 +23,6 @@ Please refer to the [TESTING file](TESTING.md) to see the currently (and passing
 May work with or without modification on other Debian derivatives.
 
 
-Recipes
 -------
 ### default
 This recipe installs the `update-notifier-common` package to provide the timestamp file used to only run `apt-get update` if the cache is more than one day old.
@@ -31,6 +30,8 @@ This recipe installs the `update-notifier-common` package to provide the timesta
 This recipe should appear first in the run list of Debian or Ubuntu nodes to ensure that the package cache is up to date before managing any `package` resources with Chef.
 
 This recipe also sets up a local cache directory for preseeding packages.
+
+**Including the default recipe on a node that does not support apt (such as Windows) results in a noop.**
 
 ### cacher-client
 Configures the node to use the `apt-cacher-ng` server as a client.

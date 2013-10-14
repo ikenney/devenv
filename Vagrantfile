@@ -20,17 +20,19 @@ Vagrant.configure("2") do |config|
   config.vm.network :forwarded_port, guest: 3000, host: 3004
   config.vm.provision :chef_solo do |chef|
     chef.add_recipe 'apt'
+    chef.add_recipe 'locale-uk'
     chef.add_recipe 'tmux'
     chef.add_recipe 'vim'
-    chef.add_recipe 'git'
-    chef.add_recipe 'dotmatrix'
-    chef.add_recipe 'postgresql::server'
+#    chef.add_recipe 'git'
+#    chef.add_recipe 'dotmatrix'
+#    chef.add_recipe 'postgresql::server'
     chef.add_recipe 'postgres-rails-db'
-    chef.add_recipe 'rvm::system'
-    chef.add_recipe 'rvm::vagrant'
-    chef.add_recipe 'rvm::gem_package'
-    chef.add_recipe 'heroku-toolbelt'
+#    chef.add_recipe 'rvm::system'
+#    chef.add_recipe 'rvm::vagrant'
+#    chef.add_recipe 'rvm::gem_package'
+#    chef.add_recipe 'heroku-toolbelt'
     chef.json = {
+      :locale => { :lang => "en_GB.utf8", :language => 'en_GB', :lc_all => 'en_GB.utf8' },
       :rvm => {
         :rubies => 'ruby-head',
         :group_users => 'vagrant',
@@ -46,10 +48,10 @@ Vagrant.configure("2") do |config|
           "postgres" => "md59e7d9c011017f092d4412b3fb11c8126",
           "vagrant" => "md5873a21eb415f6dca5d4863cb0a4c330d"
         },
-        :database => { "create" => [ "rails_dev", "rails_test" ] },
         :pg_hba   => [
           { :type => "local", :db => "all", :user => "postgres", :addr => "", :method => "trust"},
-          { :type => "host", :db => "all", :user => "postgres", :addr => "127.0.0.1/32", :method => "trust"}
+          { :type => "host", :db => "all", :user => "postgres", :addr => "127.0.0.1/32", :method => "trust"},
+          { :type => "host", :db => "all", :user => "vagrant", :addr => "127.0.0.1/32", :method => "trust"}
         ]
       },
       :build_essential => {
