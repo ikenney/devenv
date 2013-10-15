@@ -23,14 +23,13 @@ Vagrant.configure("2") do |config|
     chef.add_recipe 'locale-uk'
     chef.add_recipe 'tmux'
     chef.add_recipe 'vim'
-#    chef.add_recipe 'git'
-#    chef.add_recipe 'dotmatrix'
-#    chef.add_recipe 'postgresql::server'
+    chef.add_recipe 'git'
+    chef.add_recipe 'dotmatrix'
     chef.add_recipe 'postgres-rails-db'
-#    chef.add_recipe 'rvm::system'
-#    chef.add_recipe 'rvm::vagrant'
-#    chef.add_recipe 'rvm::gem_package'
-#    chef.add_recipe 'heroku-toolbelt'
+    chef.add_recipe 'rvm::system'
+    chef.add_recipe 'rvm::vagrant'
+    chef.add_recipe 'rvm::gem_package'
+    chef.add_recipe 'heroku-toolbelt'
     chef.json = {
       :locale => { :lang => "en_GB.utf8", :language => 'en_GB', :lc_all => 'en_GB.utf8' },
       :rvm => {
@@ -43,7 +42,7 @@ Vagrant.configure("2") do |config|
           {name: 'rails'}
         ]
       },
-      :postgresql => {
+      :postgresqlx => {
         :password => { 
           "postgres" => "md59e7d9c011017f092d4412b3fb11c8126",
           "vagrant" => "md5873a21eb415f6dca5d4863cb0a4c330d"
