@@ -1,0 +1,18 @@
+[submodule "cookbooks/dotmatrix"]
+	path = cookbooks/dotmatrix
+	url = https://github.com/hashrocket/dotmatrix.git
+[submodule "cookbooks/heroku-toolbelt"]
+	path = cookbooks/heroku-toolbelt
+	url = https://github.com/heroku/heroku.git
+[submodule "cookbooks/locale"]
+	path = cookbooks/locale
+	url = https://github.com/deepak/chef-locale.git
+[submodule "cookbooks/postgres-rails-db"]
+	path = cookbooks/postgres-rails-db
+	url = https://github.com/ikenney/postgres-rails-db.git
+[submodule "cookbooks/locale-uk"]
+	path = cookbooks/locale-uk
+	url = https://github.com/ikenney/locale-uk.git
+[submodule "cookbooks/rvm"]
+	path = cookbooks/rvm
+	url = https://github.com/fnichol/chef-rvm.git
