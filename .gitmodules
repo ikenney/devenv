@@ -10,6 +10,7 @@
 [submodule "cookbooks/postgres-rails-db"]
 	path = cookbooks/postgres-rails-db
 	url = https://github.com/ikenney/postgres-rails-db.git
+	branch = master
 [submodule "cookbooks/locale-uk"]
 	path = cookbooks/locale-uk
 	url = https://github.com/ikenney/locale-uk.git
