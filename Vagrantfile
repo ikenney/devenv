@@ -30,6 +30,7 @@ Vagrant.configure("2") do |config|
     chef.add_recipe 'rvm::vagrant'
     chef.add_recipe 'rvm::gem_package'
     chef.add_recipe 'heroku-toolbelt'
+    chef.add_recipe 'nodejs'
     chef.json = {
       :locale => { :lang => "en_GB.utf8", :language => 'en_GB', :lc_all => 'en_GB.utf8' },
       :rvm => {

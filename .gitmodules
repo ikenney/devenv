@@ -17,3 +17,6 @@
 [submodule "cookbooks/rvm"]
 	path = cookbooks/rvm
 	url = https://github.com/fnichol/chef-rvm.git
+[submodule "cookbooks/nodejs"]
+	path = cookbooks/nodejs
+	url = https://github.com/mdxp/nodejs-cookbook.git
