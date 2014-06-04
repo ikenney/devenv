@@ -1,9 +1,9 @@
 [submodule "cookbooks/dotmatrix"]
 	path = cookbooks/dotmatrix
-	url = https://github.com/hashrocket/dotmatrix.git
+	url = https://github.com/ikenney/dotmatrix.git
 [submodule "cookbooks/heroku-toolbelt"]
 	path = cookbooks/heroku-toolbelt
-	url = https://github.com/heroku/heroku.git
+	url = https://github.com/ikenney/heroku-toolbelt.git
 [submodule "cookbooks/locale"]
 	path = cookbooks/locale
 	url = https://github.com/deepak/chef-locale.git
