@@ -15,7 +15,7 @@
 # See the License for the specific language governing permissions and
 #
 Vagrant.configure("2") do |config|
-  config.vm.box = "devenv"
+  config.vm.box = "ah_test"
   config.vm.box_url = "http://files.vagrantup.com/precise64.box"
   config.vm.network :forwarded_port, guest: 3000, host: 3004
   config.vm.provision :chef_solo do |chef|
@@ -42,7 +42,7 @@ Vagrant.configure("2") do |config|
           {name: 'rails'}
         ]
       },
-      :postgresqlx => {
+      :postgresql => {
         :password => { 
           "postgres" => "md59e7d9c011017f092d4412b3fb11c8126",
           "vagrant" => "md5873a21eb415f6dca5d4863cb0a4c330d"
